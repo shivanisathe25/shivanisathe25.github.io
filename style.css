@@ -1,4 +1,10 @@
 /* ============================================
+   GOOGLE FONTS IMPORT
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Roboto+Mono:wght@400;500&display=swap');
+
+/* ============================================
    VARIABLES & RESET
    ============================================ */
 
@@ -25,11 +31,13 @@ html {
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     background-color: var(--bg-primary);
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
+    font-weight: 400;
+    letter-spacing: 0.01em;
 }
 
 /* ============================================
@@ -144,6 +152,17 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+code, pre {
+    font-family: 'Roboto Mono', monospace;
 }
 
 /* ============================================
@@ -161,27 +180,30 @@ body {
 
 .hero-content h1 {
     font-size: 4rem;
-    font-weight: 800;
+    font-weight: 700;
     margin-bottom: 1rem;
     background: var(--gradient-2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    letter-spacing: -0.02em;
 }
 
 .subtitle {
     font-size: 1.5rem;
     color: var(--accent-primary);
     margin-bottom: 1.5rem;
-    font-weight: 600;
+    font-weight: 500;
+    letter-spacing: 0.01em;
 }
 
 .tagline {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     color: var(--text-secondary);
-    max-width: 700px;
+    max-width: 750px;
     margin: 0 auto 3rem;
-    line-height: 1.8;
+    line-height: 1.7;
+    font-weight: 400;
 }
 
 .cta-buttons {
@@ -239,17 +261,19 @@ body {
 .about-text p {
     margin-bottom: 1.5rem;
     color: var(--text-secondary);
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    font-weight: 400;
 }
 
 .about-text .highlight {
     color: var(--text-primary);
-    font-size: 1.3rem;
-    font-weight: 600;
+    font-size: 1.25rem;
+    font-weight: 500;
     border-left: 4px solid var(--accent-primary);
     padding-left: 1.5rem;
     margin-bottom: 2rem;
+    line-height: 1.6;
 }
 
 /* ============================================
@@ -283,10 +307,12 @@ body {
 .skill-category h3 {
     color: var(--text-primary);
     margin-bottom: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
+    font-weight: 600;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    letter-spacing: 0em;
 }
 
 .skill-category .icon {
@@ -360,7 +386,9 @@ body {
 
 .card-header h3 {
     color: var(--text-primary);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0em;
 }
 
 .badge {
@@ -368,14 +396,18 @@ body {
     color: white;
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
 }
 
 .portfolio-card p {
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
     flex-grow: 1;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    font-weight: 400;
 }
 
 .tech-stack {
@@ -527,51 +559,14 @@ body {
 }
 
 /* ============================================
-   GLITCH EFFECT (OPTIONAL)
+   SUBTLE GLOW EFFECT (Professional)
    ============================================ */
 
-@keyframes glitch {
-    0% {
-        text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
-                    -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
-                    -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
-    }
-    14% {
-        text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
-                    -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
-                    -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
-    }
-    15% {
-        text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
-                    0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
-                    -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
-    }
-    49% {
-        text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
-                    0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
-                    -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
-    }
-    50% {
-        text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
-                    0.05em 0 0 rgba(0, 255, 0, 0.75),
-                    0 -0.05em 0 rgba(0, 0, 255, 0.75);
-    }
-    99% {
-        text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
-                    0.05em 0 0 rgba(0, 255, 0, 0.75),
-                    0 -0.05em 0 rgba(0, 0, 255, 0.75);
-    }
-    100% {
-        text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
-                    -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
-                    -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
-    }
-}
-
 .glitch {
-    animation: glitch 1s linear infinite;
+    text-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+    transition: text-shadow 0.3s ease;
 }
 
 .glitch:hover {
-    animation: glitch 0.3s linear infinite;
+    text-shadow: 0 0 30px rgba(0, 217, 255, 0.5), 0 0 40px rgba(124, 58, 237, 0.3);
 }
